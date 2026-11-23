@@ -1,0 +1,23 @@
+spirit-player-native/
+├── settings.gradle
+├── build.gradle
+├── gradle.properties
+├── .github/
+│   └── workflows/
+│       └── build.yml
+└── app/
+    ├── build.gradle
+    └── src/
+        └── main/
+            ├── AndroidManifest.xml
+            ├── assets/
+            │   └── index.html
+            ├── res/
+            │   └── drawable/
+            │       ├── tv_banner.png       (صورتك الأفقية لـ Android TV)
+            │       └── ic_launcher.png     (أيقونة التطبيق المربعة)
+            └── java/
+                └── live/bestream/spiritplayer/
+                    ├── WhiteLabelConfig.kt
+                    ├── PlayerActivity.kt
+                    └── MainActivity.kt
