@@ -1,23 +1,16 @@
-spirit-player-native/
-├── settings.gradle
-├── build.gradle
-├── gradle.properties
-├── .github/
-│   └── workflows/
-│       └── build.yml
-└── app/
-    ├── build.gradle
-    └── src/
-        └── main/
-            ├── AndroidManifest.xml
-            ├── assets/
-            │   └── index.html
-            ├── res/
-            │   └── drawable/
-            │       ├── tv_banner.png       (صورتك الأفقية لـ Android TV)
-            │       └── ic_launcher.png     (أيقونة التطبيق المربعة)
-            └── java/
-                └── live/bestream/spiritplayer/
-                    ├── WhiteLabelConfig.kt
-                    ├── PlayerActivity.kt
-                    └── MainActivity.kt
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "SpiritPlayer"
+include ':app'
