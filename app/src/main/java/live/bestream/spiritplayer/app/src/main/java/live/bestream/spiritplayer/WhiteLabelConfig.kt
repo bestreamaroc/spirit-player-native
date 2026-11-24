@@ -1,37 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+package live.bestream.spiritplayer
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
-    <uses-feature android:name="android.software.leanback" android:required="false" />
-
-    <application
-        android:allowBackup="true"
-        android:label="Spirit Player"
-        android:icon="@drawable/ic_launcher"
-        android:banner="@drawable/tv_banner"
-        android:usesCleartextTraffic="true"
-        android:hardwareAccelerated="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
-
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:screenOrientation="sensorLandscape"
-            android:configChanges="orientation|screenSize|keyboardHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".PlayerActivity"
-            android:exported="false"
-            android:screenOrientation="sensorLandscape"
-            android:configChanges="orientation|screenSize|keyboardHidden" />
-    </application>
-</manifest>
+object WhiteLabelConfig {
+    const val APP_NAME = "SPIRIT"
+    const val POWERED_BY = "BE STREAM"
+    const val SERVER_URL = "http://vip.bestream.live:80"
+    const val PRIMARY_COLOR = "#d92b4b"
+}
