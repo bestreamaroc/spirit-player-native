@@ -1,39 +1,37 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
-}
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-android {
-    namespace 'live.bestream.spiritplayer'
-    compileSdk 34
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    defaultConfig {
-        applicationId "live.bestream.spiritplayer"
-        minSdk 21
-        targetSdk 34
-        versionCode 1
-        versionName "1.0.0"
-    }
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.software.leanback" android:required="false" />
 
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = '17'
-    }
-}
+    <application
+        android:allowBackup="true"
+        android:label="Spirit Player"
+        android:icon="@drawable/ic_launcher"
+        android:banner="@drawable/tv_banner"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
 
-dependencies {
-    implementation 'androidx.core:core-ktx:1.13.1'
-    implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'androidx.media3:media3-exoplayer:1.4.1'
-    implementation 'androidx.media3:media3-exoplayer-hls:1.4.1'
-    implementation 'androidx.media3:media3-ui:1.4.1'
-    implementation 'androidx.media3:media3-datasource:1.4.1'
-}
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PlayerActivity"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+    </application>
+</manifest>
